@@ -2,7 +2,7 @@ package structures.trees;
 
 import structures.nodes.Node;
 
-public class BinaryTree<T> {
+public class BinaryTree<T extends Comparable<T>> {
     
     private Node<T> root;
 
@@ -48,7 +48,7 @@ public class BinaryTree<T> {
             return nodeInsertar;
 
         //if(actual.getValue() > nodeInsertar.getValue()){
-        if(actual.getValue().compareTo(nodeInsertar.getValue())> 0){
+        if(actual.getValue().compareTo(nodeInsertar.getValue())> 0){//revisar
             //izquierda
             actual.setLeft(addRecursivo(actual.getLeft(), nodeInsertar));
 
@@ -77,7 +77,7 @@ public class BinaryTree<T> {
         posOrderRecursivo(root);
     }
     //Pos Orden
-    private void posOrderRecursivo(Node<Integer> actual) {
+    private void posOrderRecursivo(Node<T> actual) {
         if (actual == null)
             return;
         
@@ -118,14 +118,14 @@ public class BinaryTree<T> {
     }
 
     //peso del arbol
-    //public int getPeso(){
-        //return getPesoRecursivo(root);
-
-    //}
-
     public int getPeso(){
-        return peso;
+        return getPesoRecursivo(root);
+
     }
+
+    /*public int getPeso(){
+        return peso;
+    }*/
 
 
     private int getPesoRecursivo(Node<T> actual) {
@@ -136,17 +136,5 @@ public class BinaryTree<T> {
         int heightRight = getPesoRecursivo(actual.getRight());
         return heightLeft + heightRight + 1; 
     }
-
-
-
-
-
-
-
-
-
-    
-
-
 
 }
