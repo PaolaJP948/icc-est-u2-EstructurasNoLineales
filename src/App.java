@@ -1,8 +1,8 @@
 import models.Persona;
 import structures.nodes.Node;
 import structures.trees.BinaryTree;
-import structures.trees.Ejercicio1;
-import structures.trees.Ejercicio2;
+import structures.trees.Ejercicio_01_insert;
+import structures.trees.Ejercicio_02_invert;
 import structures.trees.IntTree;
 
 public class App {
@@ -10,16 +10,17 @@ public class App {
         runIntTree();
         runBinaryTree(); 
         runEjercicios1();
-        //runEjercicios2();
+        runEjercicios2();
     
 
     }
 
     public static void runEjercicios1(){//metodo para insertar un arbol desde un arreglo de numeros
-        Ejercicio1 ejercicio1 = new Ejercicio1();
+        Ejercicio_01_insert ejercicio1 = new Ejercicio_01_insert();
         int[] numeros = new int[]{5, 3, 7, 2, 4, 6, 8,};
 
         ejercicio1.insert(numeros);
+        
         // (/n es un salto de linea )
         //(/t es una tabulacion)
         /// 
@@ -27,17 +28,24 @@ public class App {
        
 
     }
-    /*public static void runEjercicios2(){
-         Ejercicio2 ejercicio2 = new Ejercicio2();
-        int[] numero2 =  new int[] {4, 2, 7, 1, 2, 3, 9};
-        BinaryTree<Integer> tree = new BinaryTree<>();
-        for (int numero : numero2);
-            tree.add(numero);
+    public static void runEjercicios2(){
+         BinaryTree<Integer> arbol= new BinaryTree<>();
+        int[] numero2 =  new int[] {4, 2, 7, 1, 3, 6, 9};
+        
+        for (int num : numero2){
+            arbol.add(num);
+        }
 
-        Node<Integer> root = tree.getRoot();
-        ejercicio2.inverTree(root);
+        Ejercicio_02_invert ejercicio2 = new Ejercicio_02_invert();
 
-    }*/
+        System.out.println("Arbol Original:");
+        ejercicio2.printTree(arbol.getRoot());
+
+        ejercicio2.inverTree(arbol.getRoot());
+        System.out.println("\nArbol invertido");
+        ejercicio2.printTree(arbol.getRoot());
+
+    }
 
     private static void runBinaryTree(){
 

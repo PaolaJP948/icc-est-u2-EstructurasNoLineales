@@ -2,7 +2,7 @@ package structures.trees;
 
 import structures.nodes.Node;
 
-public class Ejercicio1 {
+public class Ejercicio_01_insert {
 
     public void insert(int[] numeros){
 
@@ -20,26 +20,27 @@ public class Ejercicio1 {
 
     }
     public void printTree(Node<Integer> root){
-        System.out.println("Imprimiendo el Árbol");
+        System.err.println("Ejercicio_01_Insert: ");
+        System.out.println(" Insertando un Árbol Binario ");
         printTreeRecursivo(root, 0);
 
     }
 
-    public void printTreeRecursivo(Node<Integer> actual, int value){
+    public void printTreeRecursivo(Node<Integer> actual, int espacio){
 
         if(actual == null){
             return ;
         }
 
-        value +=5 ;
-        printTreeRecursivo( actual.getRight(), value);
+        espacio +=5 ;
+        printTreeRecursivo( actual.getRight(), espacio );
         System.out.println();
 
-        for( int i = 0; i< value; i++){
-            System.out.println(" ");
+        for( int i = 0; i< espacio; i++){
+            System.out.print( " " );
         }
         System.out.println(actual.getValue());
-        printTreeRecursivo(actual.getLeft(),value);
+        printTreeRecursivo(actual.getLeft(),espacio);
     
     }
 
