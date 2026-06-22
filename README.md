@@ -4,7 +4,7 @@
 ## Fecha: 17 /06/2026
 ## Practica:
 
-## Actividad: la clase de hoy se creo una clase  que se llama IntTree - arbol binario de busca y otra clase Node.
+## Actividad: la clase de hoy se creo una clase  que se llama IntTree - arbol binario de busqueda  y otra clase Node.
 
 #  Descipción de la actividad:
  En el proyecto de hoy se creo un paquete "Sturctures","nodes" y "tress" en la cual dentro de ellos se crearon clases.

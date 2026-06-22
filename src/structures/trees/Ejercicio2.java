@@ -7,6 +7,9 @@ public class Ejercicio2 {
     public void inverTree(Node<Integer> roots){
 
         BinaryTree<Integer> arbol = new BinaryTree<>();
+
+        arbol.inOrder();
+        printTree((arbol.getRoot()));
         for (int numero : roots);
             arbol.add(numero);
 

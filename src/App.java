@@ -8,7 +8,7 @@ import structures.trees.IntTree;
 public class App {
     public static void main(String[] args) throws Exception {
         runIntTree();
-        runBinaryTree();
+        runBinaryTree(); 
         runEjercicios1();
         //runEjercicios2();
     

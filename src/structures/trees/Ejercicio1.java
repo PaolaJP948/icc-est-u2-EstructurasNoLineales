@@ -31,9 +31,16 @@ public class Ejercicio1 {
             return ;
         }
 
+        value +=5 ;
         printTreeRecursivo( actual.getRight(), value);
-        printTreeRecursivo(actual.getRight(),value);
-        System.out.println(actual);
+        System.out.println();
+
+        for( int i = 0; i< value; i++){
+            System.out.println(" ");
+        }
+        System.out.println(actual.getValue());
+        printTreeRecursivo(actual.getLeft(),value);
+    
     }
 
 
