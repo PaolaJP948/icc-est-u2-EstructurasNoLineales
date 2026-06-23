@@ -1,8 +1,13 @@
+import java.util.LinkedList;
+import java.util.List;
+
 import models.Persona;
 import structures.nodes.Node;
 import structures.trees.BinaryTree;
 import structures.trees.Ejercicio_01_insert;
 import structures.trees.Ejercicio_02_invert;
+import structures.trees.Ejercicio_03_listLeves;
+import structures.trees.Ejercicio_04_depth;
 import structures.trees.IntTree;
 
 public class App {
@@ -11,13 +16,89 @@ public class App {
         runBinaryTree(); 
         runEjercicios1();
         runEjercicios2();
+        runEjercicio3();
+        runEjercicio4();
     
 
     }
 
+    private static void runEjercicio4() {
+
+    
+
+        BinaryTree<Integer> arbol = new BinaryTree<>();
+
+        int[] numeros = {4, 2, 7, 1, 3, 0};
+
+        for (int numero : numeros) {
+            arbol.add(numero);
+        }
+
+        Ejercicio_04_depth ejercicio4 = new Ejercicio_04_depth();
+
+        System.out.println("Entrda:");
+
+        System.out.println("        4");
+        System.out.println("      2   7");
+        System.out.println("     1 3");
+        System.out.println("    0");// Tuve que cambiar de numero aquie porque si se usaba 
+        // el nodo 8 pues loq qeu hacia es poner en el lado derecho del arbol y no podia ir degajo 
+        // del uno usando el metodo add, como el 8 es mayor que el 4 y mayor que el 8 entonces quedaria en el lado derecho del arbol
+
+        System.out.println();
+
+        int profundidad = ejercicio4.maxDepth(arbol.getRoot());
+
+        System.out.println("Salidaa: " + profundidad);
+
+    }
+        
+
+    private static void runEjercicio3() {
+
+        BinaryTree<Integer> arbol = new BinaryTree<>();
+
+        int[] numeros = {4, 2, 7, 1, 3, 6, 9};
+
+        for (int numero : numeros) {
+             arbol.add(numero);
+        }
+
+        Ejercicio_03_listLeves ejercicio3 = new Ejercicio_03_listLeves();
+
+        List<LinkedList<Integer>> niveles =  ejercicio3.listLevels(arbol.getRoot());
+
+        System.out.println("Ejercicio 3 listLevels:");
+        System.out.println("Entrada:");
+
+        int espacios = niveles.size() * 4;
+
+        for (LinkedList<Integer> nivel : niveles) {
+
+        for (int i = 0; i < espacios; i++) {
+            System.out.print(" ");
+        }
+        for (Integer valor : nivel) {
+            System.out.print(valor + "   ");
+        }
+        System.out.println();
+        espacios -= 2;
+        }
+
+        System.out.println();
+        System.out.println("Salida:");
+
+        ejercicio3.imprimirNiveles(niveles);
+        
+    }
+       
+
+    
+
     public static void runEjercicios1(){//metodo para insertar un arbol desde un arreglo de numeros
         Ejercicio_01_insert ejercicio1 = new Ejercicio_01_insert();
         int[] numeros = new int[]{5, 3, 7, 2, 4, 6, 8,};
+
 
         ejercicio1.insert(numeros);
         
@@ -28,6 +109,7 @@ public class App {
        
 
     }
+
     public static void runEjercicios2(){
          BinaryTree<Integer> arbol= new BinaryTree<>();
         int[] numero2 =  new int[] {4, 2, 7, 1, 3, 6, 9};
@@ -38,6 +120,7 @@ public class App {
 
         Ejercicio_02_invert ejercicio2 = new Ejercicio_02_invert();
 
+        System.out.println("Ejercicio 2 : Invertir un arbol Binario");
         System.out.println("Arbol Original:");
         ejercicio2.printTree(arbol.getRoot());
 

@@ -88,6 +88,33 @@ Con el arbol en Pre, Pos e InOrden, Altura y pero del Árbol:
 
 ![alt text](image-4.png)
 
+---------------------------------------------------------------------------------------------------------------
+## fecha : 22/06/ 2026
+## Titulo de la practica: Ejercicios de Logica con estructuras no lineales: árboles 
+## numero depractica: 4
+
+## Descripcion:
+ En la clase de hoy se realizaron  cuatro ejercicios que sirvieron pra mejorar la comprension de logica de programacion usando estructuras de datos no lineales
+
+ - se aplico aboles binarios y arboles binarios de busqueda en la resolucion de problemas logicos
+
+ - Tmbien se impleneto algoritmos de isnsercion, recorrido por niveles y calculo de profundidad
+
+ - A la ves de organizo el cog=digo de carpetas, clase, y metodos
+
+ ## Ejercicios
+
+ Se realizaron tres ejercicios:
+
+ 1. Ejercicio 1: insertar valores de un arbol binario de busqueda
+
+ 2. Ejercicio 2: Invertir un arbol en listas enlazadas
+
+ 3. Ejercicio 3: Listar los niveles de arbol en lsitas enlazadas
+
+ 4. Calcular la profundidad maxima del arbol  
+
+
 
 
 
