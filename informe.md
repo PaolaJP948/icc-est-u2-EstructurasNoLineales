@@ -9,7 +9,6 @@
 En este proyecto se realizo cuatro ejemplos donde se usa la logica de un arbol binario en cada uno de los ejemplos implementando diferentes algoritmos. Se desarollo métodos para insertar nodos en un árbol binaro  de búsqueda, invertis la estructura del árbol, listar nodos por niveles y calcular la profundida máxima. -
 
 
-
 ## - Ejercicio_01: Inserción de un árbol Binario
 
 Método: *insert*
