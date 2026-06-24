@@ -10,13 +10,11 @@ public class Ejercicio_04_depth {
         if (root == null) {
             return 0;
         }
+        //pro
+        int proIzquierda = maxDepth(root.getLeft());
+        int proDerecha = maxDepth(root.getRight());
 
-        int profundidadIzquierda = maxDepth(root.getLeft());
-        int profundidadDerecha = maxDepth(root.getRight());
-
-        return Math.max(profundidadIzquierda, profundidadDerecha) + 1;
+        return Math.max(proIzquierda, proDerecha) + 1;
     }
-
-    
 
 }

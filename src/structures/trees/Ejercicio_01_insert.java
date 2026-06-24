@@ -15,7 +15,7 @@ public class Ejercicio_01_insert {
             
         }
         // imprimir el arbol
-        arbol.inOrder();
+        //arbol.inOrder();
         printTree((arbol.getRoot()));
 
     }
@@ -31,20 +31,9 @@ public class Ejercicio_01_insert {
         if(actual == null){
             return ;
         }
-
-        espacio +=5 ;
-        printTreeRecursivo( actual.getRight(), espacio );
-        System.out.println();
-
-        for( int i = 0; i< espacio; i++){
-            System.out.print( " " );
-        }
-        System.out.println(actual.getValue());
-        printTreeRecursivo(actual.getLeft(),espacio);
+        printTreeRecursivo( actual.getRight(), espacio +1);
+        System.out.println("\t".repeat(espacio) + actual.getValue());
+        printTreeRecursivo(actual.getLeft(),espacio +1 );
     
     }
-
-
-
-
 }

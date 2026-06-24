@@ -114,18 +114,3 @@ Con el arbol en Pre, Pos e InOrden, Altura y pero del Árbol:
 
  4. Calcular la profundidad maxima del arbol  
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

@@ -23,9 +23,7 @@ public class App {
     }
 
     private static void runEjercicio4() {
-
-    
-
+        // Primera forma de hacer este ejercicio
         BinaryTree<Integer> arbol = new BinaryTree<>();
 
         int[] numeros = {4, 2, 7, 1, 3, 0};
@@ -33,23 +31,49 @@ public class App {
         for (int numero : numeros) {
             arbol.add(numero);
         }
-
         Ejercicio_04_depth ejercicio4 = new Ejercicio_04_depth();
 
-        System.out.println("Entrda:");
 
+
+        System.out.println("Ejercicio 4: profundidad del arbol ");
+        System.out.println("Entrada:");
         System.out.println("        4");
         System.out.println("      2   7");
         System.out.println("     1 3");
         System.out.println("    0");// Tuve que cambiar de numero aquie porque si se usaba 
-        // el nodo 8 pues loq qeu hacia es poner en el lado derecho del arbol y no podia ir degajo 
-        // del uno usando el metodo add, como el 8 es mayor que el 4 y mayor que el 8 entonces quedaria en el lado derecho del arbol
+        // el nodo 8 pues lo  que  hacia es poner en el lado derecho del arbol y no podia ir debajo 
+        // del uno usando el metodo add, como el 8 es mayor que el 4 y mayor que el 7 entonces quedaria en el lado derecho del arbol
+        // de esta forma sale que el nivel del arbol es de 4 caso contrario el 8 al ser mayor se posicionaria en el lado derecho  del arbol dando un 
+        // nivel de 3
 
         System.out.println();
-
         int profundidad = ejercicio4.maxDepth(arbol.getRoot());
-
         System.out.println("Salidaa: " + profundidad);
+
+        //segunda forma de hacer este ejerciico pero ya usando el numero 8 
+        // de esta forma se debe de  insertar el nodo uno por uno.
+         Node<Integer> root = new Node<>(4);
+        root.setLeft(new Node<>(2));
+        root.setRight(new Node<>(7));
+
+        root.getLeft().setLeft(new Node<>(1));
+        root.getLeft().setRight(new Node<>(3));
+
+        root.getLeft().getLeft().setLeft(new Node<>(8));
+
+        int profund = ejercicio4.maxDepth(root);
+
+        System.out.println("\n Ejercicio 4: Segunda Forma");
+
+
+        System.out.println("Entrada:");
+        System.out.println("    " + root.getValue());
+        System.out.println("  " + root.getLeft().getValue() + "     " + root.getRight().getValue());
+        System.out.println(" " + root.getLeft().getLeft().getValue() + "   " + root.getLeft().getRight().getValue());
+        System.out.println(root.getLeft().getLeft().getLeft().getValue());
+
+        System.out.println();
+        System.out.println("Salida: " + profund);
 
     }
         
@@ -90,10 +114,7 @@ public class App {
 
         ejercicio3.imprimirNiveles(niveles);
         
-    }
-       
-
-    
+    } 
 
     public static void runEjercicios1(){//metodo para insertar un arbol desde un arreglo de numeros
         Ejercicio_01_insert ejercicio1 = new Ejercicio_01_insert();
@@ -171,27 +192,13 @@ public class App {
         
         System.out.println("Peso del Arbol" + arbolNumeros.getPeso());
 
-
-        
-
-
-
-
         /*Node<Integer> node1 = new Node(50);
         Node<Integer> node2 = new Node(10);
         Node<Integer> node3 = new Node(30);*/
-
-
-
         /*arbolNumeros.setRoot(node1);
         node1.setRight(node2);
         node2.setLeft(node3);
         System.out.println(arbolNumeros.getRoot());
         System.out.println(arbolNumeros.getRoot().getLeft().getRight());*/
-
-
-
-
-        
     }
 }
