@@ -94,5 +94,3 @@ Captura de salida de consola de la segunda forma:
 ![alt text](image-14.png)
 
 NOTA: En el ejercicio 4 se hizo de dos formas con una variacion de elementos
-
-

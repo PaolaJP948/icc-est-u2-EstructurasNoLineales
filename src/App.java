@@ -1,6 +1,10 @@
+import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
+import java.util.Set;
 
+import collections.set.Sets;
+import models.Contacto;
 import models.Persona;
 import structures.nodes.Node;
 import structures.trees.BinaryTree;
@@ -12,14 +16,67 @@ import structures.trees.IntTree;
 
 public class App {
     public static void main(String[] args) throws Exception {
-        runIntTree();
-        runBinaryTree(); 
-        runEjercicios1();
-        runEjercicios2();
-        runEjercicio3();
-        runEjercicio4();
+        //runIntTree();
+        //runBinaryTree(); 
+        //runEjercicios1();
+        //runEjercicios2();
+        //runEjercicio3();
+        //runEjercicio4();
+        runSets();
     
 
+    }
+
+    private static void runSets() {
+        Sets sets = new Sets();
+
+        // Implenetacion basada en hashSet
+        System.out.println("-----------HashCode---------");
+        Set<String> hashSet = sets.construirHashSet();
+        System.out.println(hashSet);
+        System.out.println("Size = " + hashSet.size());
+        System.out.println(hashSet.contains("F"));
+
+        ArrayList<String> list = new ArrayList<>();
+        list.add("S");
+        System.out.println(list);       
+
+
+        //implementacion de LinkedhashSet
+        // guarda elementos sin qeu se duplique, manteniendo un orden especifico
+        System.out.println("-----------LinkeHashSet---------");
+        Set<String> LinkedhashSet = sets.construirLinkedHashSet();
+        System.out.println(LinkedhashSet);
+        System.out.println("Size = " + LinkedhashSet.size());
+        System.out.println(LinkedhashSet.contains("F"));
+
+
+        //Implementacion del TreeSet
+        // Da un orden de 
+         System.out.println("-----------TreeSet---------");
+        Set<String> tSet = sets.construirTreeSet();
+        System.out.println(tSet);
+        System.out.println("Size = " + tSet.size());
+        System.out.println(tSet.contains("F"));
+
+
+        //Implementacion -> hash contacto set hashcode
+          System.out.println("-----------HasSetContacto---------");
+        Set<Contacto> hCSet = sets.construirHasSetContacto();
+        System.out.println(hCSet);
+        System.out.println("Size = " + hCSet.size());
+
+
+
+         System.out.println("---------TreeSetContacto----------");
+        Set<Contacto> tCSet = sets.construirTreeSetContacto();
+        System.out.println(tCSet);
+        System.out.println("Size = " + tCSet.size());
+
+        
+
+
+         
     }
 
     private static void runEjercicio4() {
