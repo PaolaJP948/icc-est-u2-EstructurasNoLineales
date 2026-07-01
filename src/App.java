@@ -1,8 +1,10 @@
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
+import java.util.Map;
 import java.util.Set;
 
+import collections.maps.Maps;
 import collections.set.Sets;
 import models.Contacto;
 import models.Persona;
@@ -22,9 +24,32 @@ public class App {
         //runEjercicios2();
         //runEjercicio3();
         //runEjercicio4();
-        runSets();
+        //runSets();
+        runHashMap();
+        
     
 
+    }
+
+    private static void runHashMap() {
+
+        Maps map = new Maps();
+        
+         Map<String, Integer> mapa = map.construirHashMap();
+         System.out.println("");
+         System.out.println(mapa);
+
+         Map<String, Integer> mapa1 = map.cLinkedHashMap();
+         System.out.println(mapa1);
+
+         Map<String, Integer> mapa2 = map.cTreeMap();
+         System.out.println(mapa2);
+
+         Set<Contacto>  mapa3 = map.TreeSet();
+
+
+
+       
     }
 
     private static void runSets() {
